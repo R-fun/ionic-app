@@ -6,20 +6,26 @@ const RegisterPage = (props) => {
         <React.Fragment>
             <FullLayout title="Daftar">
                 <form className="px-4 position-relative" action="post">
+                    <label htmlFor="nama" className="form-label">Nama</label>
+                    <div className="input-group mb-2">
+                        <i className="bi bi-envelope input-group-text border-0 position-relative px-3 input"></i>
+                        <input type="text" className="form-control" id="nama" name="nama" placeholder="Masukan nama"/>
+                    </div>
+
                     <label className="form-label">Email</label>
-                    <div className="input-group">
+                    <div className="input-group mb-2">
                         <i className="bi bi-envelope input-group-text border-0 position-relative px-3 input"></i>
                         <input type="text" className="form-control" id="email" name="email" placeholder="Masukan email"/>
                     </div>
 
                     <label className="form-label mt-2">Password</label>
-                    <div className="input-group">
+                    <div className="input-group mb-2">
                         <i className="bi bi-lock input-group-text border-0 position-relative px-3 input"></i>
                         <input type="password" className="form-control" id="password" name="password" placeholder="Password 8 Karakter"/>
                     </div>
 
-                    <label className="form-label mt-2">Password</label>
-                    <div className="input-group">
+                    <label className="form-label mt-2">Konfirmasi Password</label>
+                    <div className="input-group mb-2">
                         <i className="bi bi-lock input-group-text border-0 position-relative px-3 input"></i>
                         <input type="password" className="form-control" id="password_confirm" name="password_confirm" placeholder="Konfirmasi Password"/>
                     </div>

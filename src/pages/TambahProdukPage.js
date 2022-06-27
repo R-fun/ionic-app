@@ -1,9 +1,11 @@
 import React from "react";
-import '../layouts/Page.css'
+import LayoutTabs from  '../layouts/LayoutTabs';
+
+import '../layouts/Pages.css'
 
 const TambahProdukPage = (props) =>{
     return(
-        <React.Fragment>
+        <LayoutTabs>
             <div className="parent">
                 <div className="bg position-relative d-flex justify-content-between p-3">
                     <a href="dashboard" className=""> <i className="bi bi-arrow-left text-white fs-3"></i> </a>
@@ -17,7 +19,7 @@ const TambahProdukPage = (props) =>{
 
                     </div>
 
-                    <div className="flex-column px-3 mt-3">
+                    <div className="flex-column px-4 mt-3">
                         <form action="" method="post">
                             <label htmlFor="" className="form-label"> Nama Produk </label>
                             <div className="input-group">
@@ -35,7 +37,7 @@ const TambahProdukPage = (props) =>{
 
                 </div>
             </div>
-        </React.Fragment>
+        </LayoutTabs>
     )
 }
 
