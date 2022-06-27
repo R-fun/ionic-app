@@ -1,0 +1,7 @@
+{
+  "name": "sukka",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
