@@ -12,40 +12,32 @@
             border: none;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div style="background-image: url('images/background.png'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+    <div class="bg">
       <div class="d-flex justify-content-center">
         <img class="mt-4" src="images/LogoSUKKA.png" alt="LogoSUKKA" width="120">
       </div>
     </div>
     
     <div class="bg-light fixed-bottom pt-4" style="height: 75%; border-radius: 2.5rem 2.5rem 0 0;">
-        <center>
-            <b>Login</b>
-            <p style="font-size: 12px;"><b class="text-info">Login</b> untuk masuk aplikasi</p>
-        </center>
+        <div class="text-center">
+            <b>Ubah Password</b>
+            <p style="font-size: 12px;"><b class="text-biru">Masukan</b> email anda untuk verifikasi dan ubah sandi</p>
+        </div>
 
         <form class="px-4" action="post">
             
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Verifikasi Email</label>
             <div class="input-group">
                 <i class="bi bi-envelope input-group-text border-0 position-relative px-3 " style="background-color: #ecebeb; font-size:20px; color: #4a5df3;"></i>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Masukan email">
             </div>
 
-            <label for="password" class="form-label mt-2">Password</label>
-            <div class="input-group">
-                <i class="bi bi-lock input-group-text border-0 position-relative px-3 " style="background-color: #ecebeb; font-size: 20px; color: #4a5df3;"></i>
-                <input type="password" class="form-control" id="password" name="password" placeholder="password">
-            </div>
-            <div class="">
-            </div>
-            <a href="register.html" class="text-decoration-none fs-6 mt-2 me-4" style="right: 0; position: absolute;"> lupa password? </a>
             <div class="text-center">
-              <a href="dashboard.html" type="submit" class="btn text-white mt-5" style="background-color: #4a5df3; width: 16rem;" > Masuk </a>
+              <a href="dashboard.html" type="submit" class="btn text-white mt-3" style="background-color: #4a5df3; width: 16rem;" > Kirim Email </a>
             </div>
-            <p class="text-center mt-4 fs-6" > Tidak punya akun? <a href="register.html" class="text-decoration-none fw-bold" style="color: #4a5df3;"> Daftar </a></p>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

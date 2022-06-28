@@ -1,6 +1,10 @@
+.navbar{
+    height: 5rem;
+    border-radius: 2rem 2rem 0 0;
+}
 .form-control {
     background: #F6F6F6;
-    /* border: 1px solid #4a5df3; */
+    /* border: none; */
     box-shadow: none !important;
 }
 .form-select {
@@ -22,14 +26,18 @@ body {
 }
 
 .bg {
-    height: 200px;
+    height: 100%;
     background-image: url('images/dsahboard.png');
 }
 .bg-biru{
     background-color: #4a5df3;
 }
+.text-biru{
+    color: #4a5df3;
+}
 
 .parent .card {
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -37,5 +45,24 @@ body {
     border-radius: 2rem 2rem 0 0;
 }
 .kotak-list{
-    background-color: #ecebeb; border-radius: 1rem;
+    background-color: #ECECEC;
+}
+.kotak-list2{
+    background-color: #F8F1FF;
+}
+.text-grey{
+    color: #C5C5C5;
+}
+
+.input-group .form-control{
+    background: #F4F4F4;
+    border: none;
+    border-radius: 0 3rem 3rem;
+}
+.input-group .input-group-text{
+    background: #F4F4F4;
+    color: #D0D0D0;
+    border: none;
+    padding-left: 28px;
+    border-radius: 3rem 0 0 3rem;
 }
