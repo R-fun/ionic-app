@@ -10,7 +10,7 @@ const FullLayout = (props) => {
             <div className="bg-light position-absolute fixed-bottom pt-4 container">
                 <div className="text-center">
                     <b>{props.title}</b>
-                    <p className="info"><b className="text-info">{props.title}</b> untuk masuk aplikasi</p>
+                    <p className="fs-12"><b className="text">{props.title}</b> untuk masuk aplikasi</p>
                 </div>
                 {props.children}
             </div>
