@@ -1,20 +1,51 @@
 import FullLayout from "../layouts/FullLayout";
+import { useState,useRef,useEffect } from "react";
+import { useRouteMatch } from "react-router";
 
 const LoginPage = (props) => {
+    const emailRef = useRef();
+    const errRef = useRef();
+
+    const [getEmail,setEmail] = useState('');
+    const [getPassowrd,setPassword] = useState('');
+    const [getErrMesssage,setErrMessage] = useState('');
+    const [getSuccess,setSucces] = useState(false);
+    
+    useEffect(() => {
+        emailRef.current.focus()
+    },[]);
+    
+    useEffect(() => {
+        setErrMessage('');
+    },[getEmail,getPassowrd]);
+
+    const handleEmailChange = event => {
+        setEmail(event.target.value)
+    }
+    
+    const handlePasswordChange = event => {
+        setPassword(event.target.value);
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    }
+
     return (
         <FullLayout title="Login">
-            <form className="px-4" action="post">
+            <p ref={errRef} className={getErrMesssage ? "errMsg" : "offscreen"} aria-live="assertive">{getErrMesssage}</p>
+            <form className="px-4" onSubmit={handleSubmit}>
                 
                 <label htmlFor="email" className="form-label">Email</label>
                 <div className="input-group">
                     <i className="bi bi-envelope input-group-text border-0 position-relative px-3 " style={{backgroundColor: "#ecebeb", fontSize: 20, color: "#4a5df3"}}></i>
-                    <input type="text" className="form-control" id="email" name="email" placeholder="Masukan email"/>
+                    <input type="text" className="form-control" id="email" ref={emailRef} autoComplete="off" name="email" placeholder="Masukan email" onChange={handleEmailChange} value={getEmail} required />
                 </div>
 
                 <label htmlFor="password" className="form-label mt-2">Password</label>
                 <div className="input-group">
                     <i className="bi bi-lock input-group-text border-0 position-relative px-3 " style={{backgroundColor: "#ecebeb", fontSize: 20, color: "#4a5df3"}}></i>
-                    <input type="password" className="form-control" id="password" name="password" placeholder="password"/>
+                    <input type="password" className="form-control" id="password" name="password" placeholder="password" onChange={handlePasswordChange} value={getPassowrd} required/>
                 </div>
                 <div className="">
                 </div>
