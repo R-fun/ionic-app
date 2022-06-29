@@ -1,5 +1,6 @@
-.wrapper {
-    --background: url(../../public/assets/images/background.png) no-repeat center center / cover;
+.image-wrapper {
+    background-image: url("../../public/assets/images/dashboard.png");
+    height: 200px;
 }
 
 .container {

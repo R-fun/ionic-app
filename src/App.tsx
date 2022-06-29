@@ -1,6 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -26,6 +28,9 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import RiwayatPage from './pages/RiwayatPage';
 import TambahProdukPage from './pages/TambahProdukPage';
+import EditProdukPage from './pages/EditProdukPage';
+import SplashScreenPage from './pages/SplashScreenPage';
+import ProdukListPage from './pages/ProdukListPage';
 
 setupIonicReact();
 
@@ -70,10 +75,33 @@ const App: React.FC = () => (
           path="/tambah_produk"
           render={(props ) => {
             return <TambahProdukPage {...props} />;
-          }}/>
+          }}
+        />
+
+        <Route
+          exact
+          path="/edit-produk"
+          render={(props ) => {
+            return <EditProdukPage {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/splash"
+          render={(props ) => {
+            return <SplashScreenPage {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/produk-list"
+          render={(props ) => {
+            return <ProdukListPage {...props} />;
+          }}
+        />
 
         <Route exact path="/">
-          <Redirect to="/login" />
+          <Redirect to="/splash" />
         </Route>
       </IonRouterOutlet>
 
