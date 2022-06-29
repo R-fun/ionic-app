@@ -69,18 +69,17 @@ const RegisterPage = (props) => {
                 setErrMessage('register Failed');
             }
 
-            errRef.current.focus()
         });
-        }else{
-            setErrMessage('input password berbeda')
-        }
+    }else{
+        setErrMessage('input password berbeda')
+    }
+    errRef.current.focus()
     }
 
 
     return (
         <React.Fragment>
             <FullLayout title="Daftar">
-                console.log(getErrMesssage)
                 <p ref={errRef} className={getErrMesssage ? "errMsg" : "offscreen"} aria-live="assertive">{getErrMesssage}</p>
                 <form className="px-4 position-relative" onSubmit={handleSubmit}>
                     <label htmlFor="nama" className="form-label">Nama</label>

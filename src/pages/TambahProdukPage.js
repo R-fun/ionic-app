@@ -27,10 +27,10 @@ const TambahProdukPage = (props) =>{
                             </div>
 
                             <div className="text-center">
-                                <div className="btn text-white text-center mt-4 py-2 px-5 bg-biru">
+                                <ion-button className="btn text-white text-center mt-4 py-2 px-5 bg-biru" style={{ borderRadius : 20 , marginTop : 20}}>
                                     <i className="bi bi-plus me-2"></i>
                                     <span>Tambah Produk</span>
-                                </div>
+                                </ion-button>   
                             </div>
                         </form>
                     </div>

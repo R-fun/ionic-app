@@ -1,3 +1,4 @@
+import { IonLabel } from "@ionic/react";
 import React from "react";
 import LayoutTabs from '../layouts/LayoutTabs';
 
@@ -33,8 +34,8 @@ const ProdukListPage = (props) => {
                         </div>
                         <div className="kotak-list2 rounded-4 d-flex justify-content-between px-4 mx-2 py-2 mb-3">
                             <div className="text flex-column">
-                                <div className="fw-semibold">Daging Sapi A5</div>
-                                <div className="fs-12 text-dark">Rp. 12356/Kg</div>
+                                <IonLabel style={{ color: "black" }}>Telur Ayam</IonLabel><br />
+                                <IonLabel style={{ fontSize: 12, color: "black" }}>Rp. 12356</IonLabel>
                             </div>
                             <i className="bi bi-three-dots-vertical mt-2 text-grey"></i>
                         </div>

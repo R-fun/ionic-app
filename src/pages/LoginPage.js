@@ -46,6 +46,7 @@ const LoginPage = (props) => {
                 // const accessToken = response?.data?.token;
                 // const role = response?.data?.user?.role
                 // setAuth({getEmail,getPassowrd,role,accessToken});
+                console.log(response?.data?.status)
                 setStatus(response?.data?.status);
                 setPassword('');
             }).catch(error => {
@@ -86,9 +87,7 @@ const LoginPage = (props) => {
                             <div className="text-center">
                                 <button type="submit" onClick={() => {
                                     { 
-                                        getStatus == true ?  
-                                    props.history.push("/dashboard") 
-                                        : props.history.push("/login")
+                                        getStatus == true ? props.history.push("/dashboard") : props.history.push("/login");
                                 }
                                 }} className="btn text-white mt-5" style={{ backgroundColor: "#4a5df3", width: "16rem" }}> Masuk </button>
                             </div>

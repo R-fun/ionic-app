@@ -1,3 +1,4 @@
+import { IonLabel, IonList } from "@ionic/react";
 import React from "react";
 import LayoutTabs from '../layouts/LayoutTabs';
 
@@ -33,13 +34,13 @@ const DashboardPage = (props) => {
                     </div>
 
                     <div className="flex-column mt-3">
-                        <div style={{ background: "#ecebec" }} className="rounded d-flex justify-content-between px-3 mx-2 py-2">
+                        <IonList style={{ background: "#ecebec" }} className="rounded d-flex justify-content-between px-3 mx-2 py-2">
                             <div className="text flex-column">
-                                <div>Telur Ayam</div>
-                                <div style={{ fontSize: 12 }}>Rp. 12356</div>
+                                <IonLabel style={{ color : "black" }}>Telur Ayam</IonLabel><br/>
+                                <IonLabel style={{ fontSize: 12 ,color : "black" }}>Rp. 12356</IonLabel>
                             </div>
                             <i className="bi bi-three-dots-vertical mt-2 text-grey"></i>
-                        </div>
+                        </IonList>
                     </div>
                 </div>
             </div>
